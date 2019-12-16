@@ -18,7 +18,6 @@
       img.alt = data[i].name;
       img.src = data[i].download_url;
       mainContainer.appendChild(img);
-      alert(data[i].name);
     	}
    });
   }
