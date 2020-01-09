@@ -3,23 +3,47 @@ Created on Fri Nov 29 17:40:01 2019
 
 @author: Kaitlin
 
-1. Take sample of random numbers. size = 30
-2. take mean
-3. add mean to new list
-4. repeat >200 times
+1. Provide library of functions:
+    - intialize
+    - sample
+    - graph
+    - stats
+    - output
+2. Execute functions depending on version
+    1. Import necessary libraries
+        - os
+        - sys
+        - numpy
+        - matplotlib pyplot and ticker
+        - seaborn
+        - pandas
+        - math
+    2. Set default variables
+        - mean = 5.0
+        - number of trials = 1000
+        - bin size = 0.5
+        - trial size = 50
+    3. Use user-imputted values for variables if applicible
+        1. Check for values from command line or input fields
+        2. Update each corresponding value
+    4. Take the sample
+        1. Make a list of length t
+        2. Append the average value of the list to list of averages
+        3. Repeat n times
+    5. Create and output graphs
+        1. Histogram
+        2. Dotplot
+    6. Calculate statistical data
+        - Mean
+        - Standard Deviation
+    7. Output results
+        1. graphs and stats
+        2. save to file if chosen in command line
+        
 """
 
-
-'''
-1. Import necessary libraries
-2. Set default variables
-3. Use user-imputted values for variables if applicible
-4. Take the sample
-5. Create and output graphs
-6. Output statistical data
-'''
-
 ''' Libraries'''
+import os
 import sys
 import numpy as np
 import matplotlib.pyplot as plt
@@ -27,6 +51,13 @@ import matplotlib.ticker as ticker
 import seaborn as sns
 import pandas as pd
 import math
+
+
+'''
+Description: Read data from a file
+Params: csv file f
+Output: List
+'''
 
 
 '''
@@ -95,7 +126,8 @@ def qualgraph(avg, b):
     X,Y = np.meshgrid(x,y)
     
     #plot the points
-    plt.scatter(X,Y, c=Y<=hist, cmap="Greys",s=1)
+    s = 1000/len(avg)
+    plt.scatter(X,Y, c=Y<=hist, cmap="Greys",s=s)
     
     #save the figure to dot.png
     #p.savefig("dot")
@@ -107,7 +139,9 @@ Description: Calculates statistical data
 Params: values, avg
 Output: mean, standard deviance, if & why normally distributed
 '''
-def stats(n, avg):
+def stats(avg):
+    n = len(avg)
+    
     #mean
     list = []
     m = sum(avg)/n
@@ -122,13 +156,26 @@ def stats(n, avg):
 
 
 '''
+Description: Saves output to file
+Params: values, avg, stats, graphs, filenames
+Output: updated output file
+'''
+def outputp(avg, stats, hist, dot, imgname, output):
+    output.write("{}\n\nMean: {}\nStandard Dev: {}".format(avg,stats[0],stats[1]))
+    hist.figure.savefig("Images\{}{}".format(imgname,1))
+    dot.savefig('Images\{}{}'.format(imgname,2))
+    
+
+'''
 Program to run when file is not imported
 Same as web version
 '''
 if __name__ == '__main__':
     
     # Initialize values
+    os.chdir(os.path.dirname(os.getcwd()))
     values = initialize()
+    file = 0
     
     #Command line arguments
     if(len(sys.argv)):
@@ -149,24 +196,65 @@ if __name__ == '__main__':
             elif sys.argv[i][0]=='s':
                 s = int(sys.argv[i][2:])
                 np.random.seed(s)
-            #Flag for official runs
-            elif sys.argv[i]=='-w':
-                w = 1
+            #Flag for file reading
+            elif '.csv' in sys.argv[i]:
+                file = sys.argv[i]
             #error if not any of these
             else:
                 raise ValueError(sys.argv[i],' is not a valid argument.')
 
-    #Take sample
-    avg = sample(values[0],values[1],values[3])
-    #print(avg)
-
-    #Create graphs
-    hist, dot = qualgraph(avg, values[2])
-    #print(hist, dot)
+    #Read file
+    if (file):
+        #print(file)
+        data = pd.read_csv(file)
+        #print(data)
+        avg = [[],[]]
+        for i in range(len(data.index)):
+            if data.iloc[i,2]>=0:
+                if (data.iloc[i,1] == 'A'):
+                    avg[0].append(data.iloc[i,2])
+                else:
+                    avg[1].append(data.iloc[i,2])
+                    
+        'Group A'
+        #Create graphs
+        hist, dot = qualgraph(avg[0], values[2])
+        
+        #Create statistics
+        statistics = stats(avg[0])
+        
+        #Output
+        output = open('groupa.txt','w')
+        imgname = 'a'
+        outputp(avg[0], statistics, hist, dot, imgname, output)
+        output.close()
+        
+        'Group B'
+        #Create graphs
+        hist, dot = qualgraph(avg[1], values[2])
+        
+        #Create statistics
+        statistics = stats(avg[1])
+        
+        #Output
+        output = open('groupb.txt','w')
+        imgname = 'b'
+        outputp(avg[1], statistics, hist, dot, imgname, output)
+        output.close()
+            
+            
+    else:
+        #Take sample
+        avg = sample(values[0],values[1],values[3])
     
-    #Create statistics
-    m, s = stats(values[1], avg)
-    #print("mean: " + m + "\nStandard Dev: " + s)
-    
-    #Output important shit
-    print("{}\n{}\n\nMean: {}\nStandard Dev: {}".format(values,avg,m,s))
+        #Create graphs
+        hist, dot = qualgraph(avg, values[2])
+        
+        #Create statistics
+        statistics = stats(avg)
+        
+        #Output
+        output = open('simresults.txt','w')
+        imgname = 'sim'
+        outputp(avg, statistics, hist, dot, imgname, output)
+        output.close()
