@@ -9,35 +9,36 @@
 On a scale from 1-10, how confident are you in your ability to play your main instrument?
 
 ### Data table
+
 |Group | Result|
 | --- | --- |
-|A|8
-|A|
-|A|5
-|A|8
-|A|7
-|A|7
-|A|5
-|A|6
-|A|8
-|A|7
-|A|6
-|A|9
-|A|5
-|A|5.5
-|B|9
-|B|6
-|B|7
-|B|6
-|B|6
-|B|8
-|B|8.7
-|B|7
-|B|7
-|B|7
-|B|
-|B|9
-|B|7
+|A|8|
+|A| |
+|A|5|
+|A|8|
+|A|7|
+|A|7|
+|A|5|
+|A|6|
+|A|8|
+|A|7|
+|A|6|
+|A|9|
+|A|5|
+|A|5.5|
+|B|9|
+|B|6|
+|B|7|
+|B|6|
+|B|6|
+|B|8|
+|B|8.7|
+|B|7|
+|B|7|
+|B|7|
+|B| |
+|B|9|
+|B|7|
 
 ### Group A
 ![Histogram of Group A](https://raw.githubusercontent.com/FrostForth/stats/master/Images/a1.png)
@@ -69,50 +70,43 @@ Standard Dev: 2.8236018261658766
 	- repeats
 		- repeat 1000 times
 
-<details>
-
-<summary> stats.py documentation </summary>
-
-
-	1. Provide library of functions:
-	    - intialize
-	    - sample
-	    - graph
-	    - stats
-	    - output
-	2. Execute functions depending on version
-	    1. Import necessary libraries
-		- os
-		- sys
-		- numpy
-		- matplotlib pyplot and ticker
-		- seaborn
-		- pandas
-		- math
-	    2. Set default variables
-		- mean = 5.0
-		- number of trials = 1000
-		- bin size = 0.5
-		- trial size = 50
-	    3. Use user-imputted values for variables if applicible
-		1. Check for values from command line or input fields
-		2. Update each corresponding value
-	    4. Take the sample
-		1. Make a list of length t
-		2. Append the average value of the list to list of averages
-		3. Repeat n times
-	    5. Create and output graphs
-		1. Histogram
-		2. Dotplot
-	    6. Calculate statistical data
-		- Mean
-		- Standard Deviation
-	    7. Output results
-		1. graphs and stats
-		2. save to file if chosen in command line
-
-
-</details>
+### stats.py documentation
+1. Provide library of functions:
+    - intialize
+    - sample
+    - graph
+    - stats
+    - output
+2. Execute functions depending on version
+    1. Import necessary libraries
+	- os
+	- sys
+	- numpy
+	- matplotlib pyplot and ticker
+	- seaborn
+	- pandas
+	- math
+    2. Set default variables
+	- mean = 5.0
+	- number of trials = 1000
+	- bin size = 0.5
+	- trial size = 50
+    3. Use user-imputted values for variables if applicible
+	1. Check for values from command line or input fields
+	2. Update each corresponding value
+    4. Take the sample
+	1. Make a list of length t
+	2. Append the average value of the list to list of averages
+	3. Repeat n times
+    5. Create and output graphs
+	1. Histogram
+	2. Dotplot
+    6. Calculate statistical data
+	- Mean
+	- Standard Deviation
+    7. Output results
+	1. graphs and stats
+	2. save to file if chosen in command line
 
 ### Implementation
 
@@ -123,7 +117,7 @@ Standard Dev: 2.8236018261658766
 	- trial size = 50
 	- seed = 8
 
-- How to run locally
+### How to run locally
 
 Make sure you have Python 3 and these libraries installed in addition to the cloned repository:
 	
