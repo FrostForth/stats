@@ -9,6 +9,129 @@
 On a scale from 1-10, how confident are you in your ability to play your main instrument?
 
 ### Data table
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Basic HTML Table</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>Group</th>
+    <th>Result</th>
+  </tr>
+  <tr>
+    <td>A</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>A</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>A</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>A</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>A</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>A</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>A</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>A</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>A</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>A</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>A</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>A</td>
+    <td>9</td>
+  </tr>
+  <tr>
+    <td>A</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>A</td>
+    <td>5.5</td>
+  </tr>
+  <tr>
+    <td>B</td>
+    <td>9</td>
+  </tr>
+  <tr>
+    <td>B</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>B</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>B</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>B</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>B</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>B</td>
+    <td>8.7</td>
+  </tr>
+  <tr>
+    <td>B</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>B</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>B</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>B</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>B</td>
+    <td>9</td>
+  </tr>
+  <tr>
+    <td>B</td>
+    <td>7</td>
+  </tr>
+</table>
+
+</body>
+</html>
 
 |Group | Result|
 | --- | --- |
@@ -41,16 +164,15 @@ On a scale from 1-10, how confident are you in your ability to play your main in
 |B|7|
 
 ### Group A
-![Histogram of Group A](https://raw.githubusercontent.com/FrostForth/stats/master/Images/a1.png)
-
-![Dotplot of Group A](https://raw.githubusercontent.com/FrostForth/stats/master/Images/a2.png)
+<img src="https://raw.githubusercontent.com/FrostForth/stats/master/Images/a1.png" alt="Histogram of Group A" width="500">
+<img src="https://raw.githubusercontent.com/FrostForth/stats/master/Images/a2.png" alt="Dotplot of Group A" width="500">
 
 Mean: 6.653846153846154
 Standard Dev: 2.6848339489311686
-### Group B
-![Histogram of Group B](https://raw.githubusercontent.com/FrostForth/stats/master/Images/b1.png)
 
-![Dotplot of Group B](https://raw.githubusercontent.com/FrostForth/stats/master/Images/b2.png)
+### Group B
+<img src="https://raw.githubusercontent.com/FrostForth/stats/master/Images/b1.png" alt="Histogram of Group B" width="500">
+<img src="https://raw.githubusercontent.com/FrostForth/stats/master/Images/b2.png" alt="Dotplot of Group B" width="500">
 
 Mean: 7.308333333333334
 Standard Dev: 2.8236018261658766
@@ -159,9 +281,8 @@ The script can also read from a csv file with two groups: A and B. The other com
 ## Conclusion
 ### Results
 
-![Histogram of Simulation](https://raw.githubusercontent.com/FrostForth/stats/master/Images/sim1.png)
-
-![Dotplot of Simulation](https://raw.githubusercontent.com/FrostForth/stats/master/Images/sim2.png)
+<img src="https://raw.githubusercontent.com/FrostForth/stats/master/Images/sim1.png" alt="Histogram of Simuwuation" width="500">
+<img src="https://raw.githubusercontent.com/FrostForth/stats/master/Images/sim2.png" alt="Dotplot of Simuwuation" width="500">
 
 Mean: 4.995999999999995
 Standard Dev: 2.236291796926554
