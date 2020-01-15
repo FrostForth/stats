@@ -91,19 +91,23 @@ Standard Dev: 2.8236018261658766
 	- bin size = 0.5
 	- trial size = 50
     3. Use user-imputted values for variables if applicible
+    
 	1. Check for values from command line or input fields
 	2. Update each corresponding value
     4. Take the sample
+    
 	1. Make a list of length t
 	2. Append the average value of the list to list of averages
 	3. Repeat n times
     5. Create and output graphs
+    
 	1. Histogram
 	2. Dotplot
     6. Calculate statistical data
 	- Mean
 	- Standard Deviation
     7. Output results
+    
 	1. graphs and stats
 	2. save to file if chosen in command line
 
