@@ -70,46 +70,42 @@ Standard Dev: 2.8236018261658766
 		- repeat 1000 times
 
 ### stats.py documentation
-1. Provide library of functions:
-    - intialize
-    - sample
-    - graph
-    - stats
-    - output
-2. Execute functions depending on version
-    1. Import necessary libraries
-	- os
-	- sys
-	- numpy
-	- matplotlib pyplot and ticker
-	- seaborn
-	- pandas
-	- math
-    2. Set default variables
-	- mean = 5.0
-	- number of trials = 1000
-	- bin size = 0.5
-	- trial size = 50
-    3. Use user-imputted values for variables if applicible
-    
-	1. Check for values from command line or input fields
-	2. Update each corresponding value
-    4. Take the sample
-    
-	1. Make a list of length t
-	2. Append the average value of the list to list of averages
-	3. Repeat n times
-    5. Create and output graphs
-    
-	1. Histogram
-	2. Dotplot
-    6. Calculate statistical data
-	- Mean
-	- Standard Deviation
-    7. Output results
-    
-	1. graphs and stats
-	2. save to file if chosen in command line
+	1. Provide library of functions:
+	    - intialize
+	    - sample
+	    - graph
+	    - stats
+	    - output
+	2. Execute functions depending on version
+	    1. Import necessary libraries
+		- os
+		- sys
+		- numpy
+		- matplotlib pyplot and ticker
+		- seaborn
+		- pandas
+		- math
+	    2. Set default variables
+		- mean = 5.0
+		- number of trials = 1000
+		- bin size = 0.5
+		- trial size = 50
+	    3. Use user-imputted values for variables if applicible
+		1. Check for values from command line or input fields
+		2. Update each corresponding value
+	    4. Take the sample
+		1. Make a list of length t
+		2. Append the average value of the list to list of averages
+		3. Repeat n times
+	    5. Create and output graphs
+		1. Histogram
+		2. Dotplot
+	    6. Calculate statistical data
+		- Mean
+		- Standard Deviation
+	    7. Output results
+		1. graphs and stats
+		2. save to file if chosen in command line
 
 ### Implementation
 
