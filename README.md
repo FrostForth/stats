@@ -8,9 +8,47 @@
 ### Question:
 On a scale from 1-10, how confident are you in your ability to play your main instrument?
 
-### Data table 0w0
+### Data table
+|Group | Result|
+| --- | --- |
+|A|8
+|A|
+|A|5
+|A|8
+|A|7
+|A|7
+|A|5
+|A|6
+|A|8
+|A|7
+|A|6
+|A|9
+|A|5
+|A|5.5
+|B|9
+|B|6
+|B|7
+|B|6
+|B|6
+|B|8
+|B|8.7
+|B|7
+|B|7
+|B|7
+|B|
+|B|9
+|B|7
 
-### Gwafs and stwatistics too X3
+### Group A
+![Histogram of Group A]([https://raw.githubusercontent.com/FrostForth/stats/master/Images/a1.png](https://raw.githubusercontent.com/FrostForth/stats/master/Images/a1.png)
+![Dotplot of Group A]([https://raw.githubusercontent.com/FrostForth/stats/master/Images/a2.png](https://raw.githubusercontent.com/FrostForth/stats/master/Images/a2.png)
+Mean: 6.653846153846154
+Standard Dev: 2.6848339489311686
+### Group B
+![Histogram of Group B]([https://raw.githubusercontent.com/FrostForth/stats/master/Images/b1.png](https://raw.githubusercontent.com/FrostForth/stats/master/Images/b1.png)
+![Dotplot of Group B]([https://raw.githubusercontent.com/FrostForth/stats/master/Images/b1.png](https://raw.githubusercontent.com/FrostForth/stats/master/Images/b2.png)
+Mean: 7.308333333333334
+Standard Dev: 2.8236018261658766
 
 ## The Simulation
 
@@ -30,6 +68,7 @@ On a scale from 1-10, how confident are you in your ability to play your main in
 <details>
 
 <summary> stats.py documentation </summary>
+
 
 1. Provide library of functions:
     - intialize
@@ -68,6 +107,7 @@ On a scale from 1-10, how confident are you in your ability to play your main in
         1. graphs and stats
         2. save to file if chosen in command line
 
+
 </details>
 
 ### Implementation
@@ -79,7 +119,7 @@ On a scale from 1-10, how confident are you in your ability to play your main in
 	- trial size = 50
 	- seed = 8
 
-- How to on computer
+- How to run locally
 
 Make sure you have Python 3 and these libraries installed in addition to the cloned repository:
 	
@@ -118,11 +158,17 @@ The script can also read from a csv file with two groups: A and B. The other com
 
 	py stats.py data.csv
 	
-### Conclusion
+## Conclusion
+### Results
 - show 0.0 simuwuation wesults XD
 - Fancy stats words?
 - impwort latex libray UwU
 
-P( z > ( 7.308333333333334 - 6.653846153846154)/ 2.6848339489311686) = .4038
+![Histogram of Simulation]([https://raw.githubusercontent.com/FrostForth/stats/master/Images/sim1.png](https://raw.githubusercontent.com/FrostForth/stats/master/Images/sim1.png)
+![Dotplot of Simulation]([https://raw.githubusercontent.com/FrostForth/stats/master/Images/sim2.png](https://raw.githubusercontent.com/FrostForth/stats/master/Images/sim2.png)
 
-Not statistically significant since likely to occur by chance about 40% of the time with repeated sampling.
+Mean: 4.995999999999995
+Standard Dev: 2.236291796926554
+
+### Conclusion
+Since only 148 of the 1000 simulated trials had an average greater than 7.3083, the results of group B are not statistically significant. It is likely that the results were obtained by random chance and not as a result of the difference between the interviewers.
