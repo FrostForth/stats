@@ -40,13 +40,17 @@ On a scale from 1-10, how confident are you in your ability to play your main in
 |B|7
 
 ### Group A
-![Histogram of Group A]([https://raw.githubusercontent.com/FrostForth/stats/master/Images/a1.png](https://raw.githubusercontent.com/FrostForth/stats/master/Images/a1.png)
-![Dotplot of Group A]([https://raw.githubusercontent.com/FrostForth/stats/master/Images/a2.png](https://raw.githubusercontent.com/FrostForth/stats/master/Images/a2.png)
+![Histogram of Group A](https://raw.githubusercontent.com/FrostForth/stats/master/Images/a1.png)
+
+![Dotplot of Group A](https://raw.githubusercontent.com/FrostForth/stats/master/Images/a2.png)
+
 Mean: 6.653846153846154
 Standard Dev: 2.6848339489311686
 ### Group B
-![Histogram of Group B]([https://raw.githubusercontent.com/FrostForth/stats/master/Images/b1.png](https://raw.githubusercontent.com/FrostForth/stats/master/Images/b1.png)
-![Dotplot of Group B]([https://raw.githubusercontent.com/FrostForth/stats/master/Images/b1.png](https://raw.githubusercontent.com/FrostForth/stats/master/Images/b2.png)
+![Histogram of Group B](https://raw.githubusercontent.com/FrostForth/stats/master/Images/b1.png)
+
+![Dotplot of Group B](https://raw.githubusercontent.com/FrostForth/stats/master/Images/b2.png)
+
 Mean: 7.308333333333334
 Standard Dev: 2.8236018261658766
 
@@ -70,42 +74,42 @@ Standard Dev: 2.8236018261658766
 <summary> stats.py documentation </summary>
 
 
-1. Provide library of functions:
-    - intialize
-    - sample
-    - graph
-    - stats
-    - output
-2. Execute functions depending on version
-    1. Import necessary libraries
-        - os
-        - sys
-        - numpy
-        - matplotlib pyplot and ticker
-        - seaborn
-        - pandas
-        - math
-    2. Set default variables
-        - mean = 5.0
-        - number of trials = 1000
-        - bin size = 0.5
-        - trial size = 50
-    3. Use user-imputted values for variables if applicible
-        1. Check for values from command line or input fields
-        2. Update each corresponding value
-    4. Take the sample
-        1. Make a list of length t
-        2. Append the average value of the list to list of averages
-        3. Repeat n times
-    5. Create and output graphs
-        1. Histogram
-        2. Dotplot
-    6. Calculate statistical data
-        - Mean
-        - Standard Deviation
-    7. Output results
-        1. graphs and stats
-        2. save to file if chosen in command line
+	1. Provide library of functions:
+	    - intialize
+	    - sample
+	    - graph
+	    - stats
+	    - output
+	2. Execute functions depending on version
+	    1. Import necessary libraries
+		- os
+		- sys
+		- numpy
+		- matplotlib pyplot and ticker
+		- seaborn
+		- pandas
+		- math
+	    2. Set default variables
+		- mean = 5.0
+		- number of trials = 1000
+		- bin size = 0.5
+		- trial size = 50
+	    3. Use user-imputted values for variables if applicible
+		1. Check for values from command line or input fields
+		2. Update each corresponding value
+	    4. Take the sample
+		1. Make a list of length t
+		2. Append the average value of the list to list of averages
+		3. Repeat n times
+	    5. Create and output graphs
+		1. Histogram
+		2. Dotplot
+	    6. Calculate statistical data
+		- Mean
+		- Standard Deviation
+	    7. Output results
+		1. graphs and stats
+		2. save to file if chosen in command line
 
 
 </details>
@@ -160,12 +164,10 @@ The script can also read from a csv file with two groups: A and B. The other com
 	
 ## Conclusion
 ### Results
-- show 0.0 simuwuation wesults XD
-- Fancy stats words?
-- impwort latex libray UwU
 
-![Histogram of Simulation]([https://raw.githubusercontent.com/FrostForth/stats/master/Images/sim1.png](https://raw.githubusercontent.com/FrostForth/stats/master/Images/sim1.png)
-![Dotplot of Simulation]([https://raw.githubusercontent.com/FrostForth/stats/master/Images/sim2.png](https://raw.githubusercontent.com/FrostForth/stats/master/Images/sim2.png)
+![Histogram of Simulation](https://raw.githubusercontent.com/FrostForth/stats/master/Images/sim1.png)
+
+![Dotplot of Simulation](https://raw.githubusercontent.com/FrostForth/stats/master/Images/sim2.png)
 
 Mean: 4.995999999999995
 Standard Dev: 2.236291796926554
